@@ -1,0 +1,27 @@
+input {
+  background-color: transparent;
+  border: 0;
+  padding: 8px;
+  height: 35px;
+  width: 200px;
+}
+input:hover {
+  cursor: pointer;
+}
+
+select {
+  background-color: transparent;
+  border: 0;
+  padding: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 35px;
+  width: 200px;
+ }
+select:hover {
+  cursor: pointer;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
