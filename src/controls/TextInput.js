@@ -16,7 +16,7 @@ const TextInput = ({name, value, label, type, setValue }) => {
     if (event.target.value.trim() === "") {
       setEditingValue(value);
     } else {
-      setValue(event.target.value)
+      setValue(event.target.name, event.target.value);
     }
   }
 

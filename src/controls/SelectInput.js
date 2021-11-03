@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const TextInput = ({name, value, label, type, options, setValue }) => {
+const TextInput = ({name, value, options, setValue }) => {
 
   const [editingValue, setEditingValue] = useState(value);
 
