@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, Typography, Divider, Table, TableRow, TableBody, TableCell, CardHeader } from '@mui/material';
 import TextInput from '../controls/TextInput';
 import SelectInput from '../controls/SelectInput';
@@ -60,7 +60,7 @@ const ContactForm = () => {
   }
 
   console.log('Result: ', fields);
-  
+
   return (<Card variant="outlined">
     <CardHeader title="Contact Details">
     </CardHeader>
@@ -72,8 +72,20 @@ const ContactForm = () => {
               <Typography variant="p" component="b">{field.label}</Typography>
             </TableCell>
               <TableCell align="right">
-              {field.type === 'select' ? <SelectInput name={field.field} options={field.options} label={field.label} type={field.type} value={field.value} setValue={setField}></SelectInput>:
-                <TextInput name={field.field} label={field.label} type={field.type} value={field.value} setValue={setField}></TextInput>}
+              {field.type === 'select' ? <SelectInput
+                  name={field.field}
+                  options={field.options}
+                  label={field.label}
+                  type={field.type}
+                  value={field.value}
+                  setValue={setField}>
+                </SelectInput>: <TextInput
+                name={field.field}
+                label={field.label}
+                type={field.type}
+                value={field.value}
+                setValue={setField}>
+              </TextInput>}
               </TableCell>
           </TableRow>))}
       </TableBody>
